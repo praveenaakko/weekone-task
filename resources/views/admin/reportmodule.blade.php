@@ -45,49 +45,39 @@
             {{ session()->get('message') }}
             @endif
             </div>
-            <h2 class="font">Bill Modules</h2>
+            <h2 class="font">Sales report</h2>
 
 
             <table class="center">
                 <tr class="th_color">
 
-                    <th class="th_des">Id</th>
-                    <th class="th_des">Product</th>
-                    <th class="th_des">Email</th>
-                    <th class="th_des">customer_name</th>
 
+                    <th class="th_des">daily</th>
+                    <th class="th_des">weekly</th>
+                    <th class="th_des">monthly</th>
+                    <th class="th_des">yearly</th>
+                    <th class="th_des">Export</th>
 
-                    <th class="th_des">Price</th>
-                    <th class="th_des">Edit</th>
-                    <th class="th_des">Delete</th>
-                    <th class="th_des">SendMail</th>
 
 
                 </tr>
-                @foreach ($product as $products)
+
 
 
                 <tr>
-                    <td>{{ $products->id}}</td>
-                    <td>{{ $products->title}}</td>
-                    <td>{{ $user->email}}</td>
-                    <td>{{ $user->name}}</td>
+                    <td>100</td>
+                    <td>1500</td>
+                    <td>14000</td>
+                    <td>25000</td>
 
-                    <td>{{ $products->price}}</td>
 
 
                       <td>
-                        <a class="btn btn-success" href="{{ url('delete_bill',$products->id) }}">Edit</a>
+                        <a class="btn btn-success" href="">Export</a>
                       </td>
 
-                    <td>
-                        <a class="btn btn-danger" href="{{ url('delete_bill',$products->id) }}">Delete</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary" href="{{ url('mail') }}">Sendmail</a>
-                    </td>
-                </tr>
-                @endforeach
+
+
                 {{-- <span style="padding-top: 20px">
                 {{ !!$products->withQueryString()->links('pagination::bootstrap-5')!! }}
                 </span> --}}

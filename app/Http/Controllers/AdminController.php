@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Catagory;
 use App\Models\Product;
 use App\Models\User;
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
 
 
 class AdminController extends Controller
@@ -129,10 +131,33 @@ class AdminController extends Controller
         public function bill_module(){
 
             $product=product::all();
-            return view('admin.billmodule',compact('product'));
+            $user=User::all()->random();
+            return view('admin.billmodule',compact('product','user'));
         }
+        public function delete_bill($id){
+            $product=Product::find($id);
+            $product->delete();
+            return redirect()->back()->with('message','deleted successfully');
+
+
 
 
     }
+    public function mail(Request $request){
+        $user=Product::all()->random();
+        $email= $user->email;
+        $maildata=[
+            'title'=>'simreka',
+            'body'=>'your bill'
+        ];
+        Mail::to($email)->send(new SendMail($maildata));
+        return redirect()->back()->with('message','Mail sended');
+
+    }
+    public function report_module(Request $request){
+        $product=Product::all();
+        return view('admin.reportmodule', compact('product'));
+    }
 
 
+}

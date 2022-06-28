@@ -43,6 +43,11 @@ route::get('/list_user',[AdminController::class,'list_user']);
 route::get('/delete_user/{id}',[AdminController::class,'delete_user']);
 route::post('/edit_user/{id}',[AdminController::class,'edit_user']);
 route::get('/bill_module',[AdminController::class,'bill_module']);
+route::get('/delete_bill/{id}',[AdminController::class,'delete_bill']);
+route::get('mail',[AdminController::class,'mail']);
+route::get('/report_module',[AdminController::class,'report_module']);
+
+
 
 
 
