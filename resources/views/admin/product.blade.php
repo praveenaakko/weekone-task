@@ -77,11 +77,11 @@
                 <select class="text_color" name="catagory">
                     <option value="" selected="">Add Catagory here</option>
 
-                    @foreach ($list as $list )
+                 @foreach ($list as $list )
 
 
                 <option value="">{{ $list->catagory }}</option>
-                @endforeach
+                 @endforeach
                 </select>
             </div >
             <div class="div_design" required="">
@@ -89,7 +89,7 @@
                 <input type="file" name="image" >
             </div>
             <div class="div_design">
-                <input type="submit" value="Add Product" class="btn btn-primary">
+                <input type="submit" value='add_poduct' class="btn btn-primary">
             </div>
         </form>
 

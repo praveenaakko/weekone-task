@@ -7,7 +7,6 @@ use App\Models\Catagory;
 use App\Models\Product;
 use App\Models\User;
 
-use function PHPUnit\Framework\returnSelf;
 
 class AdminController extends Controller
 {
@@ -125,6 +124,12 @@ class AdminController extends Controller
 
 
 
+
+        }
+        public function bill_module(){
+
+            $product=product::all();
+            return view('admin.billmodule',compact('product'));
         }
 
 

@@ -56,7 +56,7 @@
       <div class="center">
           <table>
           <tr>
-              <th class="th_des"> Title</th>
+              <th class="th_des">Title</th>
               <th class="th_des">Quantity</th>
               <th class="th_des">price</th>
               <th class="th_des">Image</th>
@@ -64,14 +64,18 @@
 
 
           </tr>
-         <td>oiooiu</td>
-         <td>poiu</td>
-         <td>ojoo</td>
-         <td></td>
-         <td>ihiuhi</td>
-          <tr>
 
-          </tr>
+          <tr>
+         <td>demo</td>
+         <td>demo</td>
+         <td>demo</td>
+         <td>demo</td>
+         <td>demo</td>
+        </tr>
+
+
+
+
         </table>
       </div>
 

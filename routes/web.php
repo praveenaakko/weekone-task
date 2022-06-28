@@ -42,6 +42,7 @@ route::get('/show_cart',[HomeController::class,'show_cart']);
 route::get('/list_user',[AdminController::class,'list_user']);
 route::get('/delete_user/{id}',[AdminController::class,'delete_user']);
 route::post('/edit_user/{id}',[AdminController::class,'edit_user']);
+route::get('/bill_module',[AdminController::class,'bill_module']);
 
 
 
